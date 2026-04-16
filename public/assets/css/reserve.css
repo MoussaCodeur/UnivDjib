@@ -1,0 +1,271 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../images/universite_de_djibouti.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    color: #005bac;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #005bac;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005bac;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #005bac;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #005bac;
+}
+
+p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #005bac;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #003d7e;
+}
+
+.footer {
+    background-color: #005bac;
+    color: #c9d1d9;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-description {
+    max-width: 300px;
+  }
+  
+  .footer-logo {
+    width: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-description p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-socials a {
+    color: #c9d1d9;
+    margin-right: 0.5rem;
+    font-size: 18px;
+  }
+  
+  .footer-socials a:hover {
+    color: #58a6ff;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-links h4 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links ul li a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #58a6ff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid #30363d;
+    padding-top: 1rem;
+  }
+  
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    color: #005bac;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005bac;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #005bac;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+#nouveautes {
+    margin-top: 50px;
+}
+
+#nouveautes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #003d7e;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.event img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.event:hover {
+    transform: scale(1.02);
+}
+
+.event h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #005bac;
+}
+
+.event p {
+    margin: 5px 0;
+    margin-top: 50px;
+    font-size: 16px;
+}

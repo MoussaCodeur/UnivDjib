@@ -1,0 +1,95 @@
+/* Base styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark mode support */
+.dark body {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+.dark .sidebar {
+    background-color: #1f2937;
+}
+
+.dark .card {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-color: #374151;
+}
+
+.dark table thead {
+    background-color: #111827;
+}
+
+.dark table tbody tr:hover {
+    background-color: #1f2937;
+}
+
+.dark .form-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+.dark select, .dark input {
+    background-color: #111827;
+    color: #f3f4f6;
+    border-color: #4b5563;
+}
+
+/* Smooth transitions */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+    transition: transform 0.3s ease;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+/* Overlay pour mobile quand sidebar est ouverte */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        z-index: 50;
+        left: 0;
+        transform: translateX(-100%);
+    }
+    .sidebar-active {
+        transform: translateX(0);
+    }
+    .sidebar-overlay.active {
+        display: block;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #5D5CDE;
+    border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #7e7ee6;
+}

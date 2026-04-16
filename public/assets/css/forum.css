@@ -1,0 +1,323 @@
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #6186b5;
+    --accent-color: #f8b400;
+    --text-color: #333;
+    --light-gray: #f5f7fa;
+    --white: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: linear-gradient(120deg, #f5f7fa 0%, #e8ecf3 100%);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.page-title i {
+    margin-right: 15px;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+.new-topic-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.new-topic-btn i {
+    margin-right: 8px;
+}
+
+.new-topic-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #e6a700;
+}
+
+.search-container {
+    margin: 30px 0;
+    background-color: var(--white);
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.search-container:focus-within {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.search-container form {
+    display: flex;
+    width: 100%;
+}
+
+.search-container input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-container button {
+    padding: 0 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.search-container button i {
+    margin-right: 8px;
+}
+
+.search-container button:hover {
+    background-color: var(--secondary-color);
+}
+
+.search-results {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.search-results i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.topics-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.topics-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.topics-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics-list li {
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.topics-list li:hover {
+    background-color: var(--light-gray);
+    transform: translateX(5px);
+}
+
+.topic-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.topic-title i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+.topic-title:hover {
+    color: var(--accent-color);
+}
+
+.topic-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.topic-meta i {
+    margin-right: 8px;
+    color: var(--secondary-color);
+}
+
+.file-download {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: var(--transition);
+}
+
+.file-download i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+.file-download:hover {
+    color: var(--accent-color);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.cancel-search {
+    margin-left: 15px;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    transition: var(--transition);
+}
+
+.cancel-search i {
+    margin-right: 5px;
+}
+
+.cancel-search:hover {
+    color: var(--accent-color);
+}
+
+/* Animation pour les éléments lors du chargement */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .new-topic-btn {
+        margin-top: 15px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    
+    .search-container input {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .search-container button {
+        border-radius: 0 0 10px 10px;
+        padding: 12px;
+        justify-content: center;
+    }
+}

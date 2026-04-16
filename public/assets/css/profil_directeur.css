@@ -1,0 +1,118 @@
+/* Base styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark mode support */
+.dark body {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+.dark .sidebar {
+    background-color: #1f2937;
+}
+
+.dark .card {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-color: #374151;
+}
+
+.dark table thead {
+    background-color: #111827;
+}
+
+.dark table tbody tr:hover {
+    background-color: #1f2937;
+}
+
+.dark .form-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+.dark select, .dark input, .dark textarea {
+    background-color: #111827;
+    color: #f3f4f6;
+    border-color: #4b5563;
+}
+
+/* Smooth transitions */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+    transition: transform 0.3s ease;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+/* Overlay pour mobile quand sidebar est ouverte */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        z-index: 50;
+        left: 0;
+        transform: translateX(-100%);
+    }
+    .sidebar-active {
+        transform: translateX(0);
+    }
+    .sidebar-overlay.active {
+        display: block;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #5D5CDE;
+    border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #7e7ee6;
+}
+
+/* Alert messages */
+.alert {
+    transition: opacity 0.5s ease-in-out;
+}
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.4);
+    color: #065f46;
+}
+.dark .alert-success {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+}
+.alert-error {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #991b1b;
+}
+.dark .alert-error {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}

@@ -1,0 +1,68 @@
+.logo {
+    width: 30px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Laissez la hauteur s'ajuster automatiquement pour maintenir les proportions */
+    margin-right: 0px; /* Ajustez cet espacement selon vos besoins */
+    vertical-align: middle;
+}
+B{
+    font-family:'Algerian';
+    font-size: 200%;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.ali{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+header {
+    background-color: #333;
+    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 50px;
+}
+nav {
+    background-color: #444;
+    padding: 10px 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+nav a:hover {
+    background-color: #666;
+}
+section {
+    max-width: 800px;
+    margin-top: 10%;
+    margin-left: 20%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

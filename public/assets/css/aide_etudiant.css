@@ -1,0 +1,189 @@
+:root {
+    --primary-blue: #0077b6;
+    --secondary-blue: #00b4d8;
+    --accent-green: #2a9d8f;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: var(--light-bg);
+    color: #333;
+}
+
+.aide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.aide-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.aide-header h1 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-blue);
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.aide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.aide-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.aide-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--secondary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    background: #e9ecef;
+}
+
+.financial { background: #c7f9cc; color: #2a9d8f; }
+.health { background: #ffddd2; color: #e76f51; }
+.housing { background: #a2d2ff; color: #1d4e89; }
+
+.aide-details {
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.detail-item {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--secondary-blue);
+}
+
+@media (max-width: 768px) {
+    .aide-header h1 {
+        font-size: 2rem;
+    }
+    
+    .aide-card {
+        margin: 0 1rem;
+    }
+}
+
+.emergency-banner {
+    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* Bouton de retour */
+.return-button {
+position: fixed;
+top: 20px;
+right: 20px;
+padding: 12px 20px;
+background: var(--primary-blue);
+color: white;
+border-radius: 30px;
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 10px;
+box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+z-index: 1000;
+transition: all 0.3s ease;
+}
+
+.return-button:hover {
+background: var(--secondary-blue);
+transform: translateX(-5px);
+}
+
+.return-button i {
+font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+.return-button {
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.return-button span {
+    display: none;
+}
+
+.return-button i {
+    margin-right: 0;
+}
+}
